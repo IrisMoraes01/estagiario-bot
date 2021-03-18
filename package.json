@@ -1,0 +1,22 @@
+{
+  "name": "estagiario",
+  "version": "1.0.0",
+  "description": "bot para discord para entretenimento",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrisMoraes01/estagiario-bot.git"
+  },
+  "author": "IrisMoraes01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrisMoraes01/estagiario-bot/issues"
+  },
+  "homepage": "https://github.com/IrisMoraes01/estagiario-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
