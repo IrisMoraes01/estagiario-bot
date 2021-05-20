@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'inserir token aqui';
+const token = 'ODIyMTcxOTYwMzMwMTU4MDky.YFOZTg.fga3lt4hBg7kK1Q-GvIdheefqr0';
 const ytd1 = require('ytdl-core');
 const streamOptions = { seek: 0, volume: 1 };
 
@@ -17,18 +17,9 @@ bot.on('message', msg => {
 });
 
 bot.on('message', msg => {
-    if (msg.content === '@d20') {
-        msg.reply(Math.floor(Math.random() * 20) + 1);
-    } else if (msg.content === '@d12') {
-        msg.reply(Math.floor(Math.random() * 12) + 1);
-    } else if (msg.content === '@d10') {
-        msg.reply(Math.floor(Math.random() * 10) + 1);
-    } else if (msg.content === '@d8') {
-        msg.reply(Math.floor(Math.random() * 8) + 1);
-    } else if (msg.content === '@d6') {
-        msg.reply(Math.floor(Math.random() * 6) + 1);
-    } else if (msg.content === '@d4') {
-        msg.reply(Math.floor(Math.random() * 4) + 1);
+    const splits = msg.content.split("-", 2);
+    if (splits[0] === '!d') {
+        msg.reply(Math.floor(Math.random() * parseInt(splits[1]) + 1));
     }
 });
 
@@ -38,7 +29,7 @@ bot.on('message', msg => {
     }
 
     if (msg.content.toLowerCase().startsWith('?play')) {
-        let VoiceChannel = msg.guild.channels.find(channel => channel.id === 'Inserir id de canal de voz aqui');
+        let VoiceChannel = msg.guild.channels.find(channel => channel.id === '740741683909492803');
 
         if (VoiceChannel == null) {
             console.log('Canal não encontrado');
