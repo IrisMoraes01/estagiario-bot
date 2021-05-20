@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'ODIyMTcxOTYwMzMwMTU4MDky.YFOZTg.fga3lt4hBg7kK1Q-GvIdheefqr0';
+const token = 'Insira o token aqui';
 const ytd1 = require('ytdl-core');
 const streamOptions = { seek: 0, volume: 1 };
 
@@ -29,7 +29,7 @@ bot.on('message', msg => {
     }
 
     if (msg.content.toLowerCase().startsWith('?play')) {
-        let VoiceChannel = msg.guild.channels.find(channel => channel.id === '740741683909492803');
+        let VoiceChannel = msg.guild.channels.find(channel => channel.id === 'Insira o id do canal aqui');
 
         if (VoiceChannel == null) {
             console.log('Canal não encontrado');
